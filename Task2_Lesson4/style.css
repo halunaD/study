@@ -1,0 +1,26 @@
+
+.dv {
+	font-family: Comic Sans MS, San-serif;
+	font-style: bold;
+	font-size: 40px;
+	padding: 10px;
+	
+}
+.dv::before {
+	content:" -";
+	display: inline-block;
+	background-color: black;
+	width: 30%;
+	height: 8px;
+ 	font-size: 5px;
+ 		
+}
+.dv::after {
+	content:" -";
+	display: inline-block;
+	background-color: black;
+	width: 30%;
+	height: 8px;
+ 	font-size: 5px;
+ 		
+}
