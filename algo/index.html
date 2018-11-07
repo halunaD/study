@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <title>Алгоритмики для олімпіадників</title>
+  </head>
+ 
+  <body>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Алгоритмики</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Головна <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категорії</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter">Комбінаторика</a>
+                <a class="dropdown-item" href="graphs.html">Теорія графів</a>
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter">Перебір</a>
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter">Алгоритми оптимізації</a>
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter">Обчислювальна геометрія</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" href="#exampleModalCenter">Задачник</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Про автора</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <div class="container">
+            <h1 class="display-4">Алгори́тм</h1>
+            <p>Алгори́тм (латинізов. Algorithmi) - набір інструкцій, які описують порядок дій виконавця, щоб досягти результату розв'язання задачі за скінченну кількість дій; система правил виконання дискретного процесу, яка досягає поставленої мети за скінченний час.</p>
+            <p><a class="btn btn-primary btn-md" href="https://uk.wikipedia.org/wiki/Алгоритм" role="button" target="blank">Дізнатися більше »</a></p>
+          </div>
+        </div>
+  
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h2>Теорія графів</h2>
+              <p>Тут опис теорії графів...Виникнення теорії графів пов’язують з іменем Леонарда Ейлера, який у 1736 р., коли працював в Російський Академії наук, не тільки розв’язав популярну на той час головоломку про кенігсбергські мости, а й знайшов критерій існування в графі спеціального маршруту (ейлерового циклу). Це задача про те чи можливо здійснити прогулянку таким чином, що якщо вийти з будь-якого місця міста повернутися в нього, проходячи один раз по кожному мосту?. </p>
+              <p><a class="btn btn-secondary" href="graphs.html" role="button">Всі алгоритми »</a></p>
+            </div>
+            <div class="col-md-4">
+              <h2>Комбінаторика</h2>
+              <p>Тут опис комбінаторики...Комбінаторика є важливим розділом математики, що досліджує закономірності розташування, впорядкування, вибору і розподілу елементів з фіксованої множини.При великому числі можливих наслідків випробування способи прямого перебору можливих варіантів малоефективні. На допомогу приходять комбінаторні методи, в основі яких лежать певні правила </p>
+              <p><a class="btn btn-secondary" href="#" role="button">Всі алгоритми »</a></p>
+            </div>
+            <div class="col-md-4">
+              <h2>Перебір</h2>
+              <p>Тут опис категорії...Метод повного перебору  полягає у переборі всіх можливих варіантів. Метод дає гарантований розв'язок якщо множина М скінчена (ситуація, характерна для дискретного програ­мування), та існує ефективний алгоритм породження будь-якого елемента з М та обчислення на цьому елементі цільової функції..</p>
+              <p><a class="btn btn-secondary" href="#" role="button">Всі алгоритми »</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <h2 class="display-5">Олімпіадні задачі</h2>
+            <p>Тут можна розказати про олімпіадні задачі, про важливість і все таке. Тут можна розказати про олімпіадні задачі, про важливість і все таке. Тут можна розказати про олімпіадні задачі, про важливість і все таке. Тут можна розказати про олімпіадні задачі, про важливість і все таке. Тут можна розказати про олімпіадні задачі, про важливість і все таке.</p>
+            <p><a class="btn btn-primary btn-sm" href="https://uk.wikipedia.org/wiki/Алгоритм" role="button" target="blank">Дізнатися більше »</a></p>
+          </div>
+        </div>
+  
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <span class="text-muted">Алгоритмики 2018 (с)</span>
+        </div>
+      </footer>
+
+      <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Помилка</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Сторінка ще не готова, вибачте за незручності.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>

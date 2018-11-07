@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <title>Теорія графів. Алгоритмики для олімпіадників</title>
+  </head>
+ 
+  <body>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Алгоритмики</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Головна <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категорії</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter">Комбінаторика</a>
+                <a class="dropdown-item" href="graphs.html">Теорія графів</a>
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter">Пошукові алгоритми</a>
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter">Алгоритми оптимізації</a>
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter">Обчислювальна геометрія</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" href="#exampleModalCenter">Задачник</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Про автора</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <div class="container">
+            <h1 class="display-4">Теорія графів</h1>
+            <p>Наочно граф можна уявити як геометричну конфігурацію, яка складається з точок (вершини) сполучених лініями (ребрами). У строгому визначенні графом називається така пара множин G = (V, E), де V є підмножина будь-якої зліченної множини, а E — підмножина V × V.</p>
+            <p>Ось декілька алгоритмів</p>
+          </div>
+        </div>
+        
+        <div class="container with-space">
+          <div class="row">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images/algoritm1.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Алгоритм Дейкстри</h5>
+                      <p class="card-text">Знаходить найкоротший шлях від однієї вершини графа до всіх інших вершин. Класичний алгоритм Дейкстри працює тільки для графів без циклів від'ємної довжин.</p>
+                      <a href="graphs-deikstra.html" class="btn btn-primary">Детальніше</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images/depth-first.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Пошук у глибину</h5>
+                      <p class="card-text">Робота алгоритму починається з кореня дерева (або іншої обраної вершини в графі) і здійснюється обхід в максимально можливу глибину до переходу на наступну вершину.</p>
+                      <a href="#" class="btn btn-primary">Детальніше</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images/directed-graph-2.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Топологічне сортування</h5>
+                      <p class="card-text">Впорядковування вершин безконтурного орієнтованого графа згідно з частковим порядком, визначеним ребрами цього графу на множині його вершин.</p>
+                      <a href="#" class="btn btn-primary">Детальніше</a>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="jumbotron">
+          <div class="container">
+            <h2 class="display-5">Типові задачі на графи</h2>
+            <p>Описати типові задачі на графи</p>
+            <p><a class="btn btn-primary btn-sm" href="https://uk.wikipedia.org/wiki/Алгоритм" role="button" target="blank">Посилання на книжку/статтю »</a></p>
+          </div>
+        </div>
+  
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <span class="text-muted">Алгоритмики 2018 (с)</span>
+        </div>
+      </footer>
+
+            <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Помилка</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Сторінка ще не готова, вибачте за незручності.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>
