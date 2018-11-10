@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+p {
+	font-size: 28px;
+	font-weight: bold;
+	padding-top: 2px;
+	color: #fff;" 
+}
+#area {
+	margin-left: 40px;
+	padding: 20px;
+	text-align-last: center;
+	background-color: LightSteelBlue;
+	width: 40%;
+	height: 300px;
+	position: relative;
+
+}.wrapper {
+	display: none;
+}
+.start {
+text-align-last: justify;
+}
+.container {
+	margin-top: 20px;
+	margin-left: 30%;
+	position: absolute;
+	display: flex;
+	text-align-last: center;
+
+}
+.radioblock {
+	padding-left: 20px;
+	display: block;
+	text-align-last: left;
+	font-size: 18px;
+}
+.end {
+	display: none;
+}
