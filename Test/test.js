@@ -47,10 +47,16 @@ function check(num){
 			if ((countQuest==3)&(answer[2]==1)){
 				plus++;
 			}
-			// var elems = document.getElementsByName ('customRadio');
-			// for(var i=0;i<elem.length;i++){
-			// 	this.removeAttr("checked");
-			// }
+			// очистка радіобатонів
+			var uncheck=document.getElementsByTagName('input');
+			for(var i=0;i<uncheck.length;i++)
+			 {
+			  if(uncheck[i].type=='radio')
+			  {
+			   uncheck[i].checked=false;
+			  }
+			}
+			//очистка масиву відповідей
 			for(var i=0;i<answer.length;i++){
 				answer[i]=0;
 				// var idd='customRadio';
