@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- prism highliter code -->
+    <link href="css/prism.css" rel="stylesheet" />
+	 <script src="js/main.js"></script>
+    <title>Алгоритм Дейкстри. Алгоритмики для олімпіадників</title>
+  </head>
+ 
+  <body>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Алгоритмики</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Головна <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категорії</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter" onclick="errorPage()">Комбінаторика</a>
+                <a class="dropdown-item" href="graphs.html">Теорія графів</a>
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter" onclick="errorPage()">Пошукові алгоритми</a>
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter" onclick="errorPage()">Алгоритми оптимізації</a>
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter" onclick="errorPage()">Обчислювальна геометрія</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" href="#exampleModalCenter" onclick="errorPage()">Задачник</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" href="#exampleModalCenter" onclick="about()">Про автора</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron head-jumbotron">
+          <div class="container">
+            <h1 class="display-4">Алгоритм Дейкстри</h1>
+            <p>Знаходить найкоротший шлях від однієї вершини графа до всіх інших вершин. Класичний алгоритм Дейкстри працює тільки для графів без циклів від'ємної довжин.</p>
+          </div>
+        </div>
+        <div class="container">
+            <div class="row">
+              <div class="col">
+              </div>
+              <div class="col-9">
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Формулювання задачі</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Абстракція</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Інтуїтивне пояснення</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="card-body">
+                          <h5 class="card-title">Варіант 1</h5>
+                          <p class="card-text">Дана мережа автомобільних доріг, що з'єднують міста Івано-Франківської області. Знайти найкоротшу відстань від Івано-Франківська до кожного міста області, якщо рухатись можна тільки по дорогах.</p>
+                          <h5 class="card-title">Варіант 2</h5>
+                          <p class="card-text">Дана карта велосипедних доріжок Латвії та Білорусі. Знайти мінімальну відстань, яку треба проїхати, щоб дістатися від Риги до Бобруйська.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="card-body">
+                          <p class="card-text">Дано неорієнтований зв'язний граф G(V, U). Знайти відстань від вершини a до всіх інших вершин V.</p>
+                          <p>Нехай u — вершина, від якої шукаються відстані, V — множина вершин графа, d<sub>i</sub> — відстань від вершини u до вершини i, , w(i, j) — вага «ребра» (i, j).
+                          	 </p>
+
+                              Алгоритм:
+                            <ol>
+                             <li>Множина вершин U, до яких відстань відома, встановлюється рівною {u}.</li>
+                              
+                              <li>Якщо U=V, алгоритм завершено.</li>
+                              
+                              <li> Потенційні відстані D<sub>i</sub> до вершин з V\U встановлюються нескінченними.</li>
+                              
+                              <li> Для всіх ребер (i, j), де i∈U та j∈V\U, якщо D<sub>j</sub> &lt; d<sub>i</sub>+w(i, j), то D<sub>j</sub> присвоюється d<sub>i</sub>+w(i, j).</li>
+                              
+                              <li> Шукається i∈V\U, при якому Di мінімальне.</li>
+                              
+                              <li>Якщо D<sub>i</sub> дорівнює нескінченності, алгоритм завершено. В іншому випадку d<sub>i</sub> присвоюється значення D<sub>i</sub>, U присвоюється U∪{i} і виконується перехід до кроку 2.</li>
+                          </ol>
+                           
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="card-body">
+                          <p class="card-text">
+                           <img src="images/deikstr.jpg" class="rounded float-left im" alt="Ілюстрація Дейкстри">
+                            Нехай потрібно знайти відстані від 1-ї вершини до всіх інших.
+                           Кружечками позначені вершини, лініями — шляхи між ними («дуги»). Над дугами позначена їх «ціна» — довжина шляху. </p>
+                            <h4 >Кроки алгоритму</h4>
+                            <p ><u>Ініціалізація.</u><br> Розглядаємо відстані від першої(стартової) вершини до всіх решту як довжини ребер, що їх з'єднують. Якщо ребра нема, приймаємо відстань як  безкінечність. Жодна вершина графа ще не опрацьована. Помічаємо стартову вершину як опрацьовану.<br><u>Крок 1.</u><br> Серед невідмічених вершин знаходимо ребро мінімальної довжини,  яке з'єднує цю вершину з стартовою. <br><u>Крок 2.</u><br> Помічаємо вершину як опрацьовану і пробуємо покращити відстань від стартової вершини до всіх інших невідмічених вершин через цю вершину.<br><u>Крок 3.</u><br>Повторюємо крок 1 та крок 2, доки всі вершини не будуть опрацьовані. Отримаємо мінімальні відстані від стартової вершини  до всіх решту вершин. </p>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col">
+              </div>
+            </div>
+          </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                  <div class="card  ">
+                      <div class="card-body">
+                        <h5 class="card-title">Код рішення на Pascal</h5>
+                           <div class="scrol">
+                            <pre> <code class="language-pascal">                           	
+	vert,dist,point:array [1..100] of integer;
+	matr_sv:array [1..100,1..100] of integer;
+	i,j,n,k,m,vs,vf,min,imin:integer;
+	procedure read_;
+	begin
+	readln(n,k);
+	readln(vs,vf);
+	for m:=1 to k do
+	begin
+     read(i,j);
+     read(matr_sv[i,j]);
+     matr_sv[j,i]:=matr_sv[i,j];
+	end;
+	end;
+	begin
+	read_;
+	// ініціалізація
+	for i:=1 to n do
+	    for j:=1 to n do
+	      if matr_sv[i,j]=0 then matr_sv[i,j]:=1000;
+	vert[vs]:=1; point[vs]:=0;
+	for j:=1 to n do
+    	dist[j]:=matr_sv[vs,j];
+	dist[vs]:=0;
+	for j:=1 to n-1 do
+	begin
+	// знаходимо мінімум dist серед невідмічених vert
+		min:=1000;
+		for i:=1 to n do
+	    if (dist[i] &lt; min)and(vert[i]=0)
+	    			then
+                    begin
+                        min:=dist[i];
+                        imin:=i;
+                    end;
+		vert[imin]:=1;
+		for i:=1 to n do
+    		if dist[i] &gt; dist[imin]+matr_sv[imin,i]
+    				then
+                 	begin
+                        dist[i]:=dist[imin]+matr_sv[imin,i];
+                        point[i]:=imin;
+                    end;
+	end;
+
+	for i:=1 to n do
+		write(vert[i],' ');
+	writeln;
+	for i:=1 to n do
+		write(dist[i],' ');
+	writeln;
+	for i:=1 to n do
+		write(point[i],' ');
+	writeln;
+	end.
+	</code>
+</pre>
+    </div> 
+    <!-- <a href="#" class="btn btn-primary" >Код рішення</a> -->
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Код рішення на Java</h5>
+                        <div class="scrol" id="txt">
+                            <pre><code class="language-java">
+    static int [][]m={
+		{0,0,0,0,0,0,0,0,0},
+		{0,1,1,1,1,1,1,1,0},
+		{0,1,0,0,1,1,0,1,0},
+		{0,1,0,0,1,1,0,1,0},
+		{0,1,1,1,1,1,0,1,0},
+		{0,1,0,1,0,1,1,1,0},
+		{0,1,0,0,0,0,0,1,0},
+		{0,1,1,1,1,1,1,1,0},
+		{0,0,0,0,0,0,0,0,0}
+	};
+	static int k;
+	static void wavRec(int x,int y){
+		m[x][y]=k;
+		if(m[x-1][y-1]==0){wavRec(x-1,y-1);}
+		if(m[x-1][y]==0){wavRec(x-1,y);}
+		if(m[x-1][y+1]==0){wavRec(x-1,y+1);}
+		if(m[x][y-1]==0){wavRec(x,y-1);}
+		if(m[x][y+1]==0){wavRec(x,y+1);}
+		if(m[x+1][y-1]==0){wavRec(x+1,y-1);}
+		if(m[x+1][y]==0){wavRec(x+1,y);}
+		if(m[x+1][y+1]==0){wavRec(x+1,y+1);}
+	}
+	static void printMas(){
+		for(int i=0;i &lt; m.length;i++){
+			for(int j=0;j &lt; m[i].length;j++){
+				System.out.print(m[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		k=2;
+		for(int i=1;i &lt; m.length-1;i++){
+			for(int j=1;j &lt; m[i].length-1;j++){
+				if(m[i][j]==0){
+					wavRec(i,j);
+					k++;
+				}
+			}
+		}
+	printMas();
+	}
+}
+</code>
+</pre>                      
+                      </div>
+                    </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+  	</div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <span class="text-muted">Алгоритмики 2018 (с)</span>
+        </div>
+      </footer>
+
+            <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Помилка</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Сторінка ще не готова, вибачте за незручності.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/prism.js"></script>
+  </body>
+
+</html>

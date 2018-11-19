@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Тег Description -->
+<meta name="description" content="Сайт для підготовки до олімпіад з програмування">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js"></script>
+    <title>Алгоритмики для олімпіадників</title>
+  </head>
+ 
+  <body>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Алгоритмики</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Головна <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категорії</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter" onclick="errorPage()">Комбінаторика</a>
+                <a class="dropdown-item" href="graphs.html">Теорія графів</a>
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter" onclick="errorPage()">Перебір</a>
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter" onclick="errorPage()">Алгоритми оптимізації</a>
+                <a class="dropdown-item" data-toggle="modal" href="#exampleModalCenter" onclick="errorPage()">Обчислювальна геометрія</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" href="#exampleModalCenter" onclick="errorPage()">Задачник</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" href="#exampleModalCenter" onclick="about()">Про автора</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+     <!--   <main role="main"> -->
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+       
+        <div class="jumbotron head-jumbotron">
+          <div class="container">
+            <h1 class="display-4">Алгори́тм</h1>
+            <blockquote class="blockquote text-right">
+  <p class="mb-0">Алгори́тм (латинізов. Algorithmi) - набір інструкцій, які описують порядок дій виконавця, щоб досягти результату розв'язання задачі за скінченну кількість дій; система правил виконання дискретного процесу, яка досягає поставленої мети за скінченний час.</p>
+  <footer class="blockquote-footer"><cite title="Джерело цитати">Вікіпедія</cite></footer>
+</blockquote>
+            
+            <p><a class="btn btn-primary btn-md" href="https://uk.wikipedia.org/wiki/Алгоритм" role="button" target="blank">Дізнатися більше »</a></p>
+          </div>
+        </div>
+  
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-lg-4">
+            	<div class="mx-1 fon-graf">
+              <h2>Теорія графів</h2>
+              <p>Виникнення теорії графів пов’язують з іменем Леонарда Ейлера, який у 1736 р., не тільки розв’язав популярну на той час головоломку про кенігсбергські мости, а й знайшов критерій існування в графі спеціального маршруту (ейлерового циклу). Це задача про те, чи можливо здійснити прогулянку таким чином, щоб почавши шлях з будь-якого місця міста повернутися в нього, проходячи один раз по кожному мосту? </p>
+              <p><a class="btn btn-secondary" href="graphs.html" role="button">Всі алгоритми »</a></p>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-4 ">
+            	<div class="mx-1 fon-comb">
+              <h2>Комбінаторика</h2>
+              <p>Комбінаторика - один із традиційних розділів дискретної математики. Як розділ математики комбінаторика вивчає питання про те, скільки сполук, пов’язаних з тими або іншими умовами, можна утворити з даних об’єктів. Із задачами, що отримали потім назву комбінаторні, люди були знайомі вже декілька тисячоліть тому. У стародавньому Китаї захоплювались складанням магічних квадратів, у яких задані числа розміщувалися так, що їх сума по всіх горизонталях, вертикалях та головних діагоналях була однаковою; у стародавній Греції  вивчали фігури, які можна скласти з частин особливим чином розрізаного квадрату ...</p>
+              <p><a class="btn btn-secondary" data-toggle="modal" href="#exampleModalCenter" onclick="errorPage()">Всі алгоритми »</a></p>
+               </div>
+            </div>
+            <div class="col-md-12 col-lg-4">
+            	<div class="mx-1 fon-geom">
+              <h2>Обчислювальна геометрія</h2>
+              <p>Обчислювальна геометрія - це розділ інформатики (computer science), що займається алгоритмічними аспектами геометрії. Однією з найпростіших (стосовно формулювання) проблем обчислювальної геометрії є проблема знаходження пари точок, що реалізують найменшу відстань, серед n заданих точок на площині. Повний перебір (brute force) дає змогу знайти шукану пару за O(n2) часу. Класичний результат обчислювальної геометрії полягає у знаходженні алгоритму, що вимагає O(n logn) часу...</p>
+              <p><a class="btn btn-secondary" data-toggle="modal" href="#exampleModalCenter"  onclick="errorPage()">Всі алгоритми »</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <h2 class="display-5">Олімпіадні задачі</h2>
+            <p>Задачі з програмування, як правило, потребують спочатку побудуви  математичної моделі, аналітичного дослідження цієї модель, розробки алгоритму розв’язування, а вже потім написання програми, яка буде вирішувати задачу для будь-яких вхідних даних.</p>
+            <p><a class="btn btn-primary btn-sm" href="https://uk.wikipedia.org/wiki/Алгоритм" role="button" target="blank">Дізнатися більше »</a></p>
+          </div>
+        </div>
+  
+      <!-- </main> -->
+
+      <footer class="footer">
+        <div class="container">
+          <span class="text-muted">Алгоритмики 2018 (с)</span>
+        </div>
+      </footer>
+
+      <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Head</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+  </body>
+
+</html>
